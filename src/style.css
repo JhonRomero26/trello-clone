@@ -1,0 +1,132 @@
+:root {
+  --color-01: #635985;
+  --color-02: #443c68;
+  --color-03: #393053;
+  --color-04: #18122b;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-04);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.kanban {
+  overflow-x: scroll;
+  padding: 1rem;
+}
+
+.kanban::-webkit-scrollbar {
+  width: 0;
+}
+
+.kanban::-webkit-scrollbar-thumb {
+  width: 0;
+}
+
+.kanban-wrapper {
+  width: min-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+.kanban-container {
+  display: flex;
+}
+
+.kanban-body {
+  width: 350px;
+  background-color: var(--color-03);
+  padding: 1rem;
+  height: min-content;
+}
+
+.kanban-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.kanban-delete-column {
+  cursor: pointer;
+  background-color: #c93131;
+  border: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.kanban-dropzone {
+  width: 100%;
+  background-color: transparent;
+  height: 0.5rem;
+  transition: background-color 150ms ease, height 150ms ease;
+}
+
+.kanban-column-dropzone {
+  height: 100%;
+  background-color: transparent;
+  width: 0.5rem;
+  transition: background-color 150ms ease, width 150ms ease;
+}
+
+.kanban-dropzone.active {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 1rem;
+}
+
+.kanban-column-dropzone.active {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 1rem;
+}
+
+.kanban-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.kanban-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.kanban-item-input {
+  background-color: var(--color-04);
+  padding: 0.5rem 1rem;
+}
+
+.kanban-add-item {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: flex;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: var(--color-02);
+  outline: 0;
+}
